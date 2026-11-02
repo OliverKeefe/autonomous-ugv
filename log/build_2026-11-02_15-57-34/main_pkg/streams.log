@@ -1,0 +1,44 @@
+[0.939s] Invoking command in '/mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/src/main_pkg': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/build/main_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/main_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/main_pkg build --build-base /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/build/main_pkg/build install --record /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/build/main_pkg/install.log --install-scripts $base/lib/main_pkg --single-version-externally-managed install_data
+[1.154s] running egg_info
+[1.154s] creating ../../build/main_pkg/main_pkg.egg-info
+[1.177s] writing ../../build/main_pkg/main_pkg.egg-info/PKG-INFO
+[1.185s] writing dependency_links to ../../build/main_pkg/main_pkg.egg-info/dependency_links.txt
+[1.190s] writing entry points to ../../build/main_pkg/main_pkg.egg-info/entry_points.txt
+[1.194s] writing requirements to ../../build/main_pkg/main_pkg.egg-info/requires.txt
+[1.198s] writing top-level names to ../../build/main_pkg/main_pkg.egg-info/top_level.txt
+[1.270s] writing manifest file '../../build/main_pkg/main_pkg.egg-info/SOURCES.txt'
+[1.318s] reading manifest file '../../build/main_pkg/main_pkg.egg-info/SOURCES.txt'
+[1.325s] adding license file 'LICENSE'
+[1.326s] writing manifest file '../../build/main_pkg/main_pkg.egg-info/SOURCES.txt'
+[1.332s] running build
+[1.333s] running build_py
+[1.334s] creating /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/build/main_pkg/build
+[1.340s] creating /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/build/main_pkg/build/lib
+[1.347s] creating /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/build/main_pkg/build/lib/main_pkg
+[1.359s] copying main_pkg/main_node.py -> /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/build/main_pkg/build/lib/main_pkg
+[1.375s] copying main_pkg/__init__.py -> /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/build/main_pkg/build/lib/main_pkg
+[1.384s] copying main_pkg/args.py -> /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/build/main_pkg/build/lib/main_pkg
+[1.393s] copying main_pkg/marker_node.py -> /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/build/main_pkg/build/lib/main_pkg
+[1.403s] running install
+[1.424s] running install_lib
+[1.451s] creating /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/main_pkg/lib/python3.12/site-packages/main_pkg
+[1.455s] copying /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/build/main_pkg/build/lib/main_pkg/main_node.py -> /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/main_pkg/lib/python3.12/site-packages/main_pkg
+[1.463s] copying /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/build/main_pkg/build/lib/main_pkg/__init__.py -> /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/main_pkg/lib/python3.12/site-packages/main_pkg
+[1.469s] copying /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/build/main_pkg/build/lib/main_pkg/args.py -> /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/main_pkg/lib/python3.12/site-packages/main_pkg
+[1.475s] copying /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/build/main_pkg/build/lib/main_pkg/marker_node.py -> /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/main_pkg/lib/python3.12/site-packages/main_pkg
+[1.486s] byte-compiling /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/main_pkg/lib/python3.12/site-packages/main_pkg/main_node.py to main_node.cpython-312.pyc
+[1.501s] byte-compiling /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/main_pkg/lib/python3.12/site-packages/main_pkg/__init__.py to __init__.cpython-312.pyc
+[1.512s] byte-compiling /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/main_pkg/lib/python3.12/site-packages/main_pkg/args.py to args.cpython-312.pyc
+[1.523s] byte-compiling /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/main_pkg/lib/python3.12/site-packages/main_pkg/marker_node.py to marker_node.cpython-312.pyc
+[1.533s] running install_data
+[1.535s] creating /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/main_pkg/share/ament_index
+[1.540s] creating /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/main_pkg/share/ament_index/resource_index
+[1.545s] creating /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/main_pkg/share/ament_index/resource_index/packages
+[1.557s] copying resource/main_pkg -> /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/main_pkg/share/ament_index/resource_index/packages
+[1.569s] copying package.xml -> /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/main_pkg/share/main_pkg
+[1.582s] running install_egg_info
+[1.622s] Copying ../../build/main_pkg/main_pkg.egg-info to /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/main_pkg/lib/python3.12/site-packages/main_pkg-0.0.0-py3.12.egg-info
+[1.779s] running install_scripts
+[1.844s] Installing main_node script to /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/main_pkg/lib/main_pkg
+[1.856s] writing list of installed files to '/mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/build/main_pkg/install.log'
+[1.874s] Invoked command in '/mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/src/main_pkg' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/build/main_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/main_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/main_pkg build --build-base /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/build/main_pkg/build install --record /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/build/main_pkg/install.log --install-scripts $base/lib/main_pkg --single-version-externally-managed install_data

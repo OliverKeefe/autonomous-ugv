@@ -1,0 +1,118 @@
+[0.115s] Invoking command in '/mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/build/limo_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/src/limo_sim -DCMAKE_INSTALL_PREFIX=/mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim
+[0.282s] -- The C compiler identification is GNU 13.3.0
+[0.415s] -- The CXX compiler identification is GNU 13.3.0
+[0.451s] -- Detecting C compiler ABI info
+[1.098s] -- Detecting C compiler ABI info - done
+[1.105s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.114s] -- Detecting C compile features
+[1.118s] -- Detecting C compile features - done
+[1.149s] -- Detecting CXX compiler ABI info
+[1.832s] -- Detecting CXX compiler ABI info - done
+[1.837s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.838s] -- Detecting CXX compile features
+[1.838s] -- Detecting CXX compile features - done
+[1.894s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[2.043s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[2.314s] -- Found nav_msgs: 5.3.8 (/opt/ros/jazzy/share/nav_msgs/cmake)
+[2.384s] -- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[2.405s] -- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[2.429s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.452s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.544s] -- Found sensor_msgs: 5.3.8 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[2.567s] -- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[3.140s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[3.140s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/src/limo_sim/include>
+[3.140s] -- Configured cppcheck exclude dirs and/or files: 
+[3.206s] -- Added test 'flake8' to check Python code syntax and style conventions
+[3.207s] -- Configured 'flake8' exclude dirs and/or files: 
+[3.285s] -- Added test 'lint_cmake' to check CMake code style
+[3.329s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[3.672s] -- Added test 'uncrustify' to check C / C++ code style
+[3.672s] -- Configured uncrustify additional arguments: 
+[3.732s] -- Added test 'xmllint' to check XML markup files
+[3.802s] -- Configuring done (3.7s)
+[4.216s] -- Generating done (0.4s)
+[4.383s] -- Build files have been written to: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/build/limo_sim
+[4.399s] Invoked command in '/mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/build/limo_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/src/limo_sim -DCMAKE_INSTALL_PREFIX=/mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim
+[4.402s] Invoking command in '/mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/build/limo_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/build/limo_sim -- -j20 -l20
+[4.568s] [ 50%] [32mBuilding CXX object CMakeFiles/node.dir/src/node.cpp.o[0m
+[4.690s] [100%] [32m[1mLinking CXX executable node[0m
+[4.804s] [100%] Built target node
+[4.881s] Invoked command in '/mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/build/limo_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/build/limo_sim -- -j20 -l20
+[4.911s] Invoking command in '/mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/build/limo_sim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/build/limo_sim
+[4.928s] -- Install configuration: ""
+[4.949s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/lib/limo_sim/node
+[4.967s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/launch
+[4.984s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/launch/old
+[4.994s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/launch/old/right_wall_world.launch - Copy.py
+[5.013s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/launch/old/limo_world.launch - Copy.py
+[5.033s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/launch/old/empty_world.launch - Copy.py
+[5.054s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/launch/old/obstacle_avoidance_world_old.launch.py
+[5.072s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/launch/obstacle_avoidance_world.launch.py
+[5.090s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/launch/empty_world.launch.py
+[5.111s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/launch/limo_world.launch.py
+[5.131s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/launch/right_wall_world.launch.py
+[5.152s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/meshes
+[5.162s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/meshes/limo_base.dae
+[5.509s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/meshes/limo_wheel.dae
+[5.886s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/rviz
+[5.896s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/rviz/model_display.rviz
+[5.918s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/rviz/urdf.rviz
+[5.936s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/urdf
+[5.945s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/urdf/limo_four_diff.gazebo
+[5.963s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/urdf/limo_four_diff.xacro
+[5.987s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/urdf/limo_four_diff (Copy).sdf
+[6.008s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/urdf/limo_four_diff.sdf
+[6.029s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/worlds
+[6.038s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/worlds/obstacle_avoidance_world.world
+[6.059s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/worlds/right_wall_world.world
+[6.075s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/worlds/empty_world.world
+[6.090s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/worlds/limo_world.world
+[6.105s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/models
+[6.114s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/models/ground_plane
+[6.129s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/models/ground_plane/model-1_2.sdf
+[6.150s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/models/ground_plane/model-1_3.sdf
+[6.165s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/models/ground_plane/model-1_4.sdf
+[6.181s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/models/ground_plane/model.config
+[6.200s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/models/ground_plane/model.sdf
+[6.216s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/models/sun
+[6.226s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/models/sun/model-1_3.sdf
+[6.242s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/models/sun/model-1_2.sdf
+[6.260s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/models/sun/model-1_4.sdf
+[6.276s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/models/sun/model.config
+[6.293s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/models/sun/model.sdf
+[6.308s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/models/turtlebot3_common
+[6.318s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/models/turtlebot3_common/meshes
+[6.328s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/models/turtlebot3_common/meshes/burger_base.dae
+[6.350s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/models/turtlebot3_common/meshes/lds.dae
+[6.369s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/models/turtlebot3_common/meshes/waffle_base.dae
+[6.387s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/models/turtlebot3_common/meshes/r200.dae
+[6.448s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/models/turtlebot3_common/meshes/tire.dae
+[6.466s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/models/turtlebot3_common/meshes/waffle_pi_base.dae
+[6.482s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/models/turtlebot3_common/model.config
+[6.501s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/models/turtlebot3_world
+[6.511s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/models/turtlebot3_world/meshes
+[6.519s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/models/turtlebot3_world/meshes/hexagon.dae
+[6.537s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/models/turtlebot3_world/meshes/wall.dae
+[6.552s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/models/turtlebot3_world/model.config
+[6.572s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/models/turtlebot3_world/model-1_4.sdf
+[6.590s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/models/turtlebot3_world/model.sdf
+[6.607s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/params
+[6.615s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/params/limo_coding_bridge.yaml
+[6.632s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/params/gazebo2.config
+[6.677s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/ament_index/resource_index/package_run_dependencies/limo_sim
+[6.703s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/ament_index/resource_index/parent_prefix_path/limo_sim
+[6.728s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/environment/ament_prefix_path.sh
+[6.747s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/environment/ament_prefix_path.dsv
+[6.763s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/environment/path.sh
+[6.778s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/environment/path.dsv
+[6.796s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/local_setup.bash
+[6.814s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/local_setup.sh
+[6.835s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/local_setup.zsh
+[6.851s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/local_setup.dsv
+[6.868s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/package.dsv
+[6.895s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/ament_index/resource_index/packages/limo_sim
+[6.911s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/cmake/limo_simConfig.cmake
+[6.937s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/cmake/limo_simConfig-version.cmake
+[6.957s] -- Installing: /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/install/limo_sim/share/limo_sim/package.xml
+[6.982s] Invoked command in '/mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/build/limo_sim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /mdrive/ok22786/MSc-IntelligentSystems-And-Robotics/intelligent-systems-and-robotics/autonomous-ugv/build/limo_sim
