@@ -65,22 +65,27 @@ def movement():
     msg = Twist()
 
     msg.linear.x = 0.2
-    msg.angular.z = 0
+    msg.angular.z = really_basic_controller(regions)
 
 
     # really_basic_controller(r=regions)
     return msg
 
-def really_basic_controller():
+def really_basic_controller(r):
     """
       Temporary, just exists to prove the network connection
       to the physical robot actually works.
       """
-    z = 0
-    if regions_['left'] < 0.1:
-        z += 0.1
-        return z
-    return 0
+    if r['front'] < 0.6:
+        return -0.8
+    if r['left'] < 0.4:
+        return -0.5
+    if r['right'] < 0.4:
+        return 0.5
+    if r['left'] < 0.4 and r['right'] < 0.4:
+        return 0.0
+
+    return 0.0
 
 def stop():
     global mynode_
@@ -121,6 +126,7 @@ def main():
     finally:
         mynode_.destroy_timer(timer)
         mynode_.destroy_node()
+
 
 if __name__ == '__main__':
     main()
