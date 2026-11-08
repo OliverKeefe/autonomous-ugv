@@ -1,3 +1,6 @@
+import time
+import pidc_pkg.types as t
+import pidc_pkg.utils as utils
 
 
 class PIDController:
@@ -10,33 +13,44 @@ class PIDController:
         # Kd - derivative gain
         self.kd = None
         # dt - loop interval time (assumes reasonable scale)
-        self.dt = None
+        self.dt: t.DeltaTime = 0.0
         # prev_err = previous error
         self.prev_err = 0
-        # integral - integral, duh.
+        # integral - integral, duh. Represents running sum of the past error.
         self.integral = 0
 
-    def control(
-            self,
-            setpoint,
-            measured_val,
-            kp,
-            ki,
-            kd,
-            prev_err,
-            integral,
-            dt
-    ):
-        while True:
-            err = (setpoint - measured_val)
-            self.kp = err
-            self.integral += err * self.dt
-            derivative = (err - prev_err) / dt
-            control = kp * err + ki * integral + kd * derivative
-            return control, err, integral
+        self.integral_limits = (-float('inf'), float('inf'))
 
-    def get_setpoint(self):
-        pass
+        self._last_time = None
+
+    def control(self, setpoint, measured_val):
+
+        # now must be monotonic not time.Time as monotonic cant go backwards.
+        now = time.monotonic()
+
+        if self._last_time is not None:
+            dt = now - self._last_time
+        else:
+            dt = self.dt
+
+        dt = utils.prevent_div_by_zero(dt)
+
+        #while True:
+        err = (setpoint - measured_val)
+        self.kp = err
+
+        self.integral += err * dt
+        low, high = self.integral_limits # Prevents windup.
+        self.integral = max(low, min(high, self.integral))
+
+        # TODO: 'derivative = -(measured - prev_measured) / dt' probably works better here, must test.
+        derivative = (err - self.prev_err) / dt
+
+        control = self.kp * err + self.ki * self.integral + self.kd * derivative
+        self.prev_err = err
+        self._last_time = now
+        return control
+
 
     def update_kp(self, new_kp):
         self.kp = new_kp
