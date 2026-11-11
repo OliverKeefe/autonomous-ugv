@@ -14,7 +14,7 @@ def test_trapezoidal_known_points(x, expected):
     assert math.isclose(t(x, *ARGS), expected)
 
 @pytest.mark.parametrize("x", [i / 10 for i in range(-100, 101)])
-def test_trapezoidal_always_in_unit_interval(x):
+def test_trapezoidal_always_in_unit_interval(x: float | int):
     assert 0.0 <= t(x, *ARGS) <= 1.0
 
 def test_trapezoidal_shape_props():
