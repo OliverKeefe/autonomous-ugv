@@ -11,8 +11,9 @@ class MembershipFunction:
         return max(0.0, min((x - a) / (b - a), 1.0, (d - x) / (d - c)))
 
     @staticmethod
-    def triangular():
-        pass
+    def triangular(x: float | int, a: float | int,
+                   b: float | int, c: float | int) -> float:
+        return max(0.0, min((x - a) / (b - a), 1.0, (c - x) / (c - b)))
 
     @staticmethod
     def gaussian():
