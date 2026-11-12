@@ -17,6 +17,8 @@ from main_pkg.marker_node import MarkerTracker
 
 from pidc_pkg.pidc import PIDController
 
+from utils.safety import clamp
+
 mynode_ = None
 pub_ = None
 regions_ = {
@@ -65,10 +67,18 @@ def movement():
 
     msg = Twist()
 
-    msg.linear.x = 0.2
-    msg.angular.z = really_basic_controller(regions)
+    #msg.linear.x = 0.2
+    #msg.angular.z = really_basic_controller(regions)
 
-
+    # Prevent collision
+    if regions['front'] <= 0.5:
+        msg.linear.x = 0.0
+        msg.angular.z = -0.8 # TODO: if left closer than right, turn right et visa versa
+    else:
+        l_side = min(regions['left'], 2.0)
+        r_side = min(regions['right'], 2.0)
+        msg.angular.z = clamp(pid_steer_.control(0.0, r_side - l_side), -0.8, 0.8)
+        msg.linear.x = clamp(pid_velocity_.control(regions['front'], 0.6), 0.0, 0.2)
     # really_basic_controller(r=regions)
     return msg
 
@@ -96,10 +106,14 @@ def stop():
     return msg
 
 def main():
-    global pub_, mynode_, tracker_
+    global pub_, mynode_, tracker_, pid_steer_, pid_velocity_
 
     rclpy.init()
     mynode_ = rclpy.create_node('reading_laser')
+
+    # PID Controller
+    pid_steer_ = PIDController(kp=0.1, ki=0.4, kd=0.4, dt=0.2)
+    pid_velocity_ = PIDController(kp=0.05, ki=0.2, kd=0.2, dt=0.2)
 
     # Initialise the vision tracker on the existing node
     tracker_ = MarkerTracker(mynode_)
