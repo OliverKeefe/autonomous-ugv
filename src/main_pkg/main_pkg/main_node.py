@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import traceback
 from typing import Dict
 
 from main_pkg.args import mode_argument
@@ -122,6 +123,7 @@ def main():
         rclpy.spin(mynode_)
     except Exception as e:
         print(e)
+        traceback.print_exc()
         stop()  # stop the robot
     finally:
         mynode_.destroy_timer(timer)
