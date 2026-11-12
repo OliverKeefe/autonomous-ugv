@@ -22,8 +22,8 @@ pub_ = None
 regions_ = {
     'left': 0,
     'right': 0,
-    'fLeft': 0,
-    'fRight': 0,
+    'front_left': 0,
+    'front_right': 0,
     'front1': 0,
     'front2': 0,
 }
