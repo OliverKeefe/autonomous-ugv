@@ -44,10 +44,13 @@ def clbk_laser(msg):
     print("Data Points: ", len(msg.ranges))
 
     regions_ = {
-        # LIDAR readings are anti-clockwise, starting at 0 on the right-most edge of the LiDAR FOV.
-        'front': find_nearest(msg.ranges[120:122]),
-        'right': find_nearest(msg.ranges[21:23]),
-        'left':  find_nearest(msg.ranges[219:221]),
+        # 120 samples over 360 deg, index 0 = rear (-180 deg), 3 deg per index.
+        # index i -> angle = -180 + 3*i degrees.
+        'front': find_nearest(msg.ranges[58:62]),  # ~0 deg (straight ahead)
+        'front_right': find_nearest(msg.ranges[43:51]),  # ~ -30 to -50 deg
+        'front_left': find_nearest(msg.ranges[69:77]),  # ~ +30 to +50 deg
+        'right': find_nearest(msg.ranges[29:32]),  # ~ -90 deg
+        'left': find_nearest(msg.ranges[88:91]),  # ~ +90 deg
     }
 
     twstmsg_ = movement()
@@ -63,7 +66,7 @@ def movement():
 
     #print(tracker_.visionDebug()) # Debug camera print, similar to the LiDAR print below, to be used for the Camera functionality.
 
-    print(f"[LiDAR]  Left: {regions['left']:.2f} | Front: {regions['front']:.2f} | Right: {regions['right']:.2f}\n")
+    print(f"[LiDAR]  Left: {regions['left']:.2f} | Front Left: {regions['front_left']:.2f} | Front: {regions['front']:.2f}\n| Front Right: {regions['front_right']:.2f} |Right: {regions['right']:.2f}\n")
 
     msg = Twist()
 
