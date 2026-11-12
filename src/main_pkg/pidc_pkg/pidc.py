@@ -5,13 +5,13 @@ import pidc_pkg.utils as utils
 
 class PIDController:
     """Class for Proportional-Integral-Derivative Controller."""
-    def __init__(self):
+    def __init__(self, kp=0.0, ki=0.0, kd=0.0, dt=0.0):
         # Kp - proportional gain.
-        self.kp = None
+        self.kp = kp
         # Ki - integral gain.
-        self.ki= None
+        self.ki= ki
         # Kd - derivative gain
-        self.kd = None
+        self.kd = kd
         # dt - loop interval time (assumes reasonable scale)
         self.dt: t.DeltaTime = 0.0
         # prev_err = previous error
@@ -37,7 +37,7 @@ class PIDController:
 
         #while True:
         err = (setpoint - measured_val)
-        self.kp = err
+        #self.kp = err
 
         self.integral += err * dt
         low, high = self.integral_limits # Prevents windup.
