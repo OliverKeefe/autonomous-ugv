@@ -7,7 +7,7 @@ import numpy as np
 from cv_bridge import CvBridge
 from sensor_msgs.msg import CameraInfo, Image
 from rclpy.qos import QoSProfile, ReliabilityPolicy
-
+from utils.versions import get_opencv_version
 
 class MarkerTracker:
     def __init__(self, node):
@@ -27,7 +27,16 @@ class MarkerTracker:
         self.angle = None     # Radians (positive = right, negative = left)
 
         self.dictionary = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_4X4_50)
-        self.parameters = cv2.aruco.DetectorParameters_create()
+
+        # `DetectorParameters_create()` is deprecated in versions exceeding 4.7
+        cv2_major, cv2_minor = get_opencv_version()
+
+        if (cv2_major, cv2_minor) >= (4, 7):
+            self.parameters = cv2.aruco.DetectorParameters()
+        else:
+            self.parameters = cv2.aruco.DetectorParameters_create()
+
+        self.detector = cv2.aruco.ArucoDetector(self.dictionary, self.parameters)
 
         qos_best_effort = QoSProfile(depth=10, reliability=ReliabilityPolicy.BEST_EFFORT)
 
