@@ -25,10 +25,10 @@ class MembershipFunction:
         e = math.e
         dist_from_c = x - c
         scale_by_width = dist_from_c / sigma
-        square_scale = scale_by_width ** 2
+        square_scale = scale_by_width**2
 
         negative_expo = -square_scale
-        gauss = e ** negative_expo
+        gauss = e**negative_expo
 
         return gauss
 
