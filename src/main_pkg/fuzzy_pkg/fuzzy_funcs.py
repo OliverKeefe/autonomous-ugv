@@ -1,9 +1,4 @@
-from dataclasses import dataclass
 import math
-
-@dataclass
-class FuzzySet:
-    elements: set
 
 class MembershipFunction:
     @staticmethod
