@@ -37,5 +37,6 @@ class MembershipFunction:
         pass
 
     @staticmethod
-    def sigmoidal():
-        pass
+    def sigmoidal(x: float | int, a: float | int, c: float | int) -> float:
+        e = math.e
+        return 1 / (1 + e**-a * (x - c))
