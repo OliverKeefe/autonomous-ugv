@@ -33,8 +33,11 @@ class MembershipFunction:
         return gauss
 
     @staticmethod
-    def singleton():
-        pass
+    def singleton(x: float | int, c: float | int) -> float:
+        if x == c:
+            return 1
+        else:
+            return 0
 
     @staticmethod
     def sigmoidal(x: float | int, a: float | int, c: float | int) -> float:
