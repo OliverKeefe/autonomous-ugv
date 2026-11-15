@@ -89,7 +89,7 @@ def movement():
     # Prevent collision
     if regions['front'] <= 0.5:
         msg.linear.x = 0.0
-        msg.angular.z = -0.8 # TODO: if left closer than right, turn right et visa versa
+        msg.angular.z = -0.8 if regions['left'] > regions['right'] else 0.8
     else:
         l_side = min(regions['left'], 2.0)
         r_side = min(regions['right'], 2.0)
