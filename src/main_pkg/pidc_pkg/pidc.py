@@ -5,7 +5,8 @@ import pidc_pkg.utils as utils
 
 class PIDController:
     """Class for Proportional-Integral-Derivative Controller."""
-    def __init__(self, kp=0.0, ki=0.0, kd=0.0, dt=0.0):
+    def __init__(self, kp=0.0, ki=0.0, kd=0.0,
+                 out_limits=(-1e9, 1e9), integral_limits=(-1.0, 1.0), dt=0.0):
         # Kp - proportional gain.
         self.kp = kp
         # Ki - integral gain.

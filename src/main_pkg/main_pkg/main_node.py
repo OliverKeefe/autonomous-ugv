@@ -39,8 +39,8 @@ def timer_callback():
         pub_.publish(twstmsg_)
 
 def clbk_laser(msg):
-    global regions_, twstmsg_, count
-
+    global regions_, twstmsg_, count, target_yaw_, last_scan_
+    last_scan_ = time.monotonic()
     print("Data Points: ", len(msg.ranges))
 
     regions_ = {
@@ -53,7 +53,12 @@ def clbk_laser(msg):
         'left': find_nearest(msg.ranges[88:91]),  # ~ +90 deg
     }
 
+    if target_yaw_ is None:
+        target_yaw_ = yaw_
+
     twstmsg_ = movement()
+    pub_._publish(twstmsg_)
+
 
 def find_nearest(list):
     f_list = filter(lambda item: item > 0.0, list)  # exclude zeros
