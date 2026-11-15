@@ -34,6 +34,9 @@ twstmsg_ = None
 count = 0
 tracker_ = None  # Global tracker reference
 
+def sector_range():
+    pass
+
 def timer_callback():
     global pub_, twstmsg_
     if twstmsg_ is not None:
