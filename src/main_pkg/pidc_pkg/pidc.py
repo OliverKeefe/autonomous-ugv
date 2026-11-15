@@ -19,13 +19,13 @@ class PIDController:
         self.prev_err = 0
         # integral - integral, duh. Represents running sum of the past error.
         self.integral = 0
-
+        self.out_limits = out_limits
         self.integral_limits = (-float('inf'), float('inf'))
-
         self._last_time = None
+        self._prev_measured = None
+        self.candidate = None
 
     def control(self, setpoint, measured_val):
-
         # now must be monotonic not time.Time as monotonic cant go backwards.
         now = time.monotonic()
 
@@ -33,25 +33,50 @@ class PIDController:
             dt = now - self._last_time
         else:
             dt = self.dt
+        dt = max(1e-3, min(dt, 0.5))
+        self._last_time = now
 
-        dt = utils.prevent_div_by_zero(dt)
-
-        #while True:
-        err = (setpoint - measured_val)
+        err = setpoint - measured_val
         #self.kp = err
 
-        self.integral += err * dt
-        low, high = self.integral_limits # Prevents windup.
-        self.integral = max(low, min(high, self.integral))
+        derivative = 0.0
+        if self._prev_measured is not None:
+            derivative = (err - self.prev_err) / dt
+        self._prev_measured = measured_val
 
-        # TODO: 'derivative = -(measured - prev_measured) / dt' probably works better here, must test.
-        derivative = (err - self.prev_err) / dt
+        _proportional = self.kp * err
+        _integral = self.integral
+        _derivative = self.kd * derivative
 
-        control = self.kp * err + self.ki * self.integral + self.kd * derivative
-        self.prev_err = err
-        self._last_time = now
+        out_lo, out_hi = self.out_limits
+        integral_lo, integral_hi = self.integral_limits
+
+        self.candidate = max(integral_lo, min(integral_hi, (self.integral + (err * dt))))
+        self.integral_clamp(_proportional, out_hi, out_lo, _derivative, err)
+
+
+        #self.integral += err * dt
+        #low, high = self.integral_limits  # Prevents windup.
+        #self.integral = max(low, min(high, self.integral))
+
+        _integral = self.ki * self.integral
+        control = max(out_lo, min(out_hi, _proportional + _integral + _derivative))
+
+        self.reset()
+
         return control
 
+    def integral_clamp(self, p, ohi, olo, d, e):
+        if (p + self.ki * self.candidate + d > ohi and e > 0) or \
+                (p + self.ki * self.candidate + d < olo and e < 0):
+            self.candidate = self.integral
+        self.integral = self.candidate
+
+
+    def reset(self):
+        self.integral = 0.0
+        self._prev_measured = None
+        self._last_time = None
 
     def update_kp(self, new_kp):
         self.kp = new_kp
