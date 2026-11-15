@@ -38,6 +38,13 @@ def timer_callback():
     if twstmsg_ is not None:
         pub_.publish(twstmsg_)
 
+def clbk_odometer(msg):
+    global yaw_, odometer_velocity_
+    q = msg.pose.pose.orientation
+    yaw_ = math.atan2(2.0 * (q.w * q.z + q.x * q.y),
+                      1.0 - 2.0 * (q.y * q.y + q.z * q.z))
+    odometer_velocity_ = abs(msg.twist.twist.linear.x)
+
 def clbk_laser(msg):
     global regions_, twstmsg_, count, target_yaw_, last_scan_
     last_scan_ = time.monotonic()
