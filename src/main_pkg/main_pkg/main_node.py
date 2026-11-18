@@ -131,10 +131,10 @@ def main():
     mynode_ = rclpy.create_node('reading_laser')
 
     # PID Controller
-    pid_steer_ = PIDController(kp=0.1, ki=0.4, kd=0.4, out_limits=(-0.8, 0.8), dt=0.2)
+    pid_steer_ = PIDController(kp=0.3, ki=0.0, kd=0.8, out_limits=(-0.5, 0.5), dt=0.1)
 
-    pid_velocity_ = PIDController(kp=0.05, ki=0.2, kd=0.2, out_limits=(0.0, 0.2),
-                                  integral_limits=(-0.6, 0.6), dt=0.2)
+    pid_velocity_ = PIDController(kp=0.2, ki=0.0, kd=0.0, out_limits=(0.0, 0.2),
+                                  integral_limits=(-0.6, 0.6), dt=0.1)
 
     mynode_.create_subscription(Odometry, '/odom', clbk_odometer, 10)
 
