@@ -33,6 +33,11 @@ regions_ = {
 twstmsg_ = None
 count = 0
 tracker_ = None  # Global tracker reference
+target_yaw_ = None
+last_scan_ = 0.0
+yaw_ = 0.0
+odometer_velocity_ = 0.0
+turn_dir_ = 0.0
 
 def sector_range():
     pass
