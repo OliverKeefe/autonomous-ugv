@@ -69,7 +69,6 @@ def clbk_laser(msg):
         target_yaw_ = yaw_
 
     twstmsg_ = movement()
-    pub_._publish(twstmsg_)
 
 
 def find_nearest(list):
@@ -78,28 +77,28 @@ def find_nearest(list):
 
 #Basic movement method
 def movement():
-    global regions_, tracker_
+    global regions_, tracker_, turn_dir_
     regions = regions_
 
     #print(tracker_.visionDebug()) # Debug camera print, similar to the LiDAR print below, to be used for the Camera functionality.
 
-    print(f"[LiDAR]  Left: {regions['left']:.2f} | Front Left: {regions['front_left']:.2f} | Front: {regions['front']:.2f}\n| Front Right: {regions['front_right']:.2f} |Right: {regions['right']:.2f}\n")
+    print(f"[LiDAR]  Left: {regions['left']:.2f} | Front: {regions['front']:.2f}\n | Right: {regions['right']:.2f}\n")
 
     msg = Twist()
 
-    #msg.linear.x = 0.2
-    #msg.angular.z = really_basic_controller(regions)
-
-    # Prevent collision
-    if regions['front'] <= 0.5:
+    if regions['front'] <= 0.5 or (turn_dir_ != 0.0 and regions['front'] < 0.8):
+        if turn_dir_ == 0.0:  # decides once when entering.
+            turn_dir_ = 1.0 if regions['left'] > regions['right'] else -1.0
+            pid_steer_.reset()
+            pid_velocity_.reset()
         msg.linear.x = 0.0
-        msg.angular.z = -0.8 if regions['left'] > regions['right'] else 0.8
+        msg.angular.z = 0.8 * turn_dir_
     else:
+        turn_dir_ = 0.0
         l_side = min(regions['left'], 2.0)
         r_side = min(regions['right'], 2.0)
-        msg.angular.z = clamp(pid_steer_.control(0.0, r_side - l_side), -0.8, 0.8)
-        msg.linear.x = clamp(pid_velocity_.control(regions['front'], 0.6), 0.0, 0.2)
-    # really_basic_controller(r=regions)
+        msg.angular.z = clamp(pid_steer_.control(0.0, r_side - l_side), -0.5, 0.5)
+        msg.linear.x = 0.15 # TODO: Re-add pid control to speed.
     return msg
 
 def really_basic_controller(r):
