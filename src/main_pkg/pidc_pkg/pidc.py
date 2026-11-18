@@ -14,13 +14,13 @@ class PIDController:
         # Kd - derivative gain
         self.kd = kd
         # dt - loop interval time (assumes reasonable scale)
-        self.dt: t.DeltaTime = 0.0
+        self.dt: t.DeltaTime = dt
         # prev_err = previous error
         self.prev_err = 0
         # integral - integral, duh. Represents running sum of the past error.
         self.integral = 0
         self.out_limits = out_limits
-        self.integral_limits = (-float('inf'), float('inf'))
+        self.integral_limits = integral_limits #(-float('inf'), float('inf'))
         self._last_time = None
         self._prev_measured = None
         self.candidate = None
@@ -43,6 +43,7 @@ class PIDController:
         if self._prev_measured is not None:
             derivative = (err - self.prev_err) / dt
         self._prev_measured = measured_val
+        self.prev_err = err
 
         _proportional = self.kp * err
         _integral = self.integral
@@ -62,8 +63,6 @@ class PIDController:
         _integral = self.ki * self.integral
         control = max(out_lo, min(out_hi, _proportional + _integral + _derivative))
 
-        self.reset()
-
         return control
 
     def integral_clamp(self, p, ohi, olo, d, e):
@@ -72,9 +71,9 @@ class PIDController:
             self.candidate = self.integral
         self.integral = self.candidate
 
-
     def reset(self):
         self.integral = 0.0
+        self.prev_err = 0
         self._prev_measured = None
         self._last_time = None
 
