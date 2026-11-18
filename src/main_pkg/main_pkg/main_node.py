@@ -60,13 +60,9 @@ def clbk_laser(msg):
     print("Data Points: ", len(msg.ranges))
 
     regions_ = {
-        # 120 samples over 360 deg, index 0 = rear (-180 deg), 3 deg per index.
-        # index i -> angle = -180 + 3*i degrees.
-        'front': find_nearest(msg.ranges[58:62]),  # ~0 deg (straight ahead)
-        'front_right': find_nearest(msg.ranges[43:51]),  # ~ -30 to -50 deg
-        'front_left': find_nearest(msg.ranges[69:77]),  # ~ +30 to +50 deg
-        'right': find_nearest(msg.ranges[29:32]),  # ~ -90 deg
-        'left': find_nearest(msg.ranges[88:91]),  # ~ +90 deg
+        'front': find_nearest(msg.ranges[120:122]),
+        'right': find_nearest(msg.ranges[21:23]),
+        'left': find_nearest(msg.ranges[219:221]),
     }
 
     if target_yaw_ is None:
