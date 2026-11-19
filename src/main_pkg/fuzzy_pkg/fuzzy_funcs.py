@@ -36,5 +36,4 @@ class MembershipFunction:
 
     @staticmethod
     def sigmoidal(x: float | int, a: float | int, c: float | int) -> float:
-        e = math.e
-        return 1 / (1 + e**-a * (x - c))
+        return 1 / (1 + math.exp(-a * (x - c)))
