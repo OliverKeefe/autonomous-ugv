@@ -30,9 +30,9 @@ class MembershipFunction:
     @staticmethod
     def singleton(x: float | int, c: float | int) -> float:
         if x == c:
-            return 1
+            return 1.0
         else:
-            return 0
+            return 0.0
 
     @staticmethod
     def sigmoidal(x: float | int, a: float | int, c: float | int) -> float:
